@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="background-container">
+        <div class="background current"></div>
+        <div class="background next"></div>
+    </div>
+    
+    <div id="clock-container">
+        <div id="clock" style="text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);">00:00:00</div>
+    </div>
+    <div id="head">
+        <h2 style="text-align: center; 
+                color: rgba(0, 170, 255, 0.99); 
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-family: 'Brush Script MT', cursive;
+                margin: 20px 0;">
+                Dynamic Digital Clock
+        </h2>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

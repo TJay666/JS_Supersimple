@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Password Generator</h1>
+    </header>
+    <main>
+        <section id="generator">
+            <!-- Password generator content will go here -->
+            <div id="password">
+                <h2>Your Secure Password for</h2>
+                <label for="platform">for</label>
+                <select id="platform">
+                    <option value="FB">FB</option>
+                    <option value="IG">IG</option>
+                    <option value="LINE">LINE</option>
+                    <option value="X">X</option>
+                </select>
+                <br><br>
+                <input type="text" id="password-display" readonly>
+                <button id="regenerate">Regenerate</button>
+                <button id="copy">Copy</button>
+                <button id="save">Save</button>
+        </section>
+        <section id="saved-passwords">
+            <h2>Saved Passwords</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Datetime</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody id="password-list">
+                    <!-- Saved passwords will be listed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Password Generator</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
