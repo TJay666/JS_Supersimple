@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // Objects = store multiple values in a single variable
+        // Object = key-value pairs
+        // Object = properties and methods
+        /*
+        const product = {
+            name: 'socks',
+            price: 1090,
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        product.newProperty = true;
+        console.log(product);
+
+        delete product.newProperty;
+        console.log(product);
+        */
+
+        /*
+        const product2 = {
+            name: 'shirt',
+            'delivery-time': '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1 () {
+                console.log('function inside object');
+            }
+        };
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(typeof console.log);
+
+        // JSON = JavaScript Object Notation
+        // JSON = lightweight data-interchange format
+        // JSON = easy to read and write
+        // JSON = easy to parse and generate
+        // JSON = used with AJAX, APIs, and databases
+        // JSON = text written with JavaScript object notation
+        // JSON = object { key: value }
+        // JSON = array [ value1, value2 ]
+        // JSON = string "value"
+        // JSON = number value
+        // JSON = boolean true / false
+        // JSON = null
+        // JSON = JSON.stringify() = convert object to string
+        console.log(JSON.stringify(product2));
+        
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+        */
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+        console.log('hello'.toLowerCase());
+
+        const objects1 = {
+            message: 'hello',
+        };
+
+        const objects2 = objects1;
+        objects1.message = 'Good Job!';
+        console.log(objects1);
+        console.log(objects2);
+
+        const objects3 = {
+            message: 'Good Job!',
+        };
+
+        // Same object in memory
+        console.log(objects1 === objects2);
+
+        // Different objects in memory
+        console.log(objects1 === objects3);
+
+        const objects4 = {
+            message: 'Good Job!',
+            price: 799
+        };
+
+        // Shortcut for objects4.message
+        // const message = objects4.message;
+        const {message, price} = objects4;
+        console.log(message);
+        console.log(price);
+
+        const objects5 = {
+            // message: message,
+            message,
+            // method: function function1() {
+            //     console.log('method');
+            // }
+            // Shorthand method
+            method() {
+                console.log('method');
+            }
+        };
+        console.log(objects5);
+    </script>
+</body>
+</html>

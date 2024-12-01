@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <button onclick="
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        ">
+        Show Quantity
+    </button>
+    <button onclick="
+        // cartQuantity = cartQuantity + 1;
+        cartQuantity += 1;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+        Add to Cart
+    </button>
+    <button onclick="
+        // cartQuantity = cartQuantity + 2;
+        cartQuantity += 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+        +2
+    </button>
+    <button onclick="
+        // cartQuantity = cartQuantity + 3;
+        cartQuantity += 3;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+        +3
+    </button>
+    <button onclick="
+        cartQuantity = 0;
+        console.log('Cart was reset!');
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+        Reset Cart
+    </button>
+
+    <script>
+        // Camel Case for naming a variable
+        // Not too short, not too long, and descriptive variable name
+        let cartQuantity = 0;
+
+        // Pascal Case for naming a variable, like CartQuantity
+        // kebab-case for naming a variable, like cart-quantity
+        // snake_case for naming a variable, like cart_quantity
+
+    </script>
+</body>
+</html>

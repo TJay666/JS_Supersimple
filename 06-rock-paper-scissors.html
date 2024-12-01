@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    
+        const randomNumber = Math.random();
+
+        // Scope of the variable computerMove is limited to the if else block
+        let computerMove = '';
+
+        // Devide the random number into three equal parts
+        // To get a random number between 0 and 0.33, we can check if the random number is greater than or equal to 0 and less than 0.33
+        if (randomNumber >= 0 && randomNumber < 0.33) {
+            computerMove = 'Rock';
+        } else if (randomNumber >= 0.33 && randomNumber < 0.66) {
+            computerMove = 'Paper';
+        } else {
+            computerMove = 'Scissors';
+        }
+    
+        console.log(computerMove);
+
+        let result = '';
+
+        if (computerMove === 'Rock') {
+            result = 'tie';
+        } else if (computerMove === 'Paper') {
+            result = 'You lose';
+        } else {
+            result = 'You win';
+        }
+
+        alert(`You picked Rock. Computer picked ${computerMove}. ${result}`);
+    ">Rock</button>
+
+    <button onclick="
+        
+            const randomNumber = Math.random();
+    
+            // Scope of the variable computerMove is limited to the if else block
+            let computerMove = '';
+    
+            // Devide the random number into three equal parts
+            // To get a random number between 0 and 0.33, we can check if the random number is greater than or equal to 0 and less than 0.33
+            if (randomNumber >= 0 && randomNumber < 0.33) {
+                computerMove = 'Rock';
+            } else if (randomNumber >= 0.33 && randomNumber < 0.66) {
+                computerMove = 'Paper';
+            } else {
+                computerMove = 'Scissors';
+            }
+        
+            console.log(computerMove);
+    
+            let result = '';
+    
+            if (computerMove === 'Rock') {
+                result = 'You win';
+            } else if (computerMove === 'Paper') {
+                result = 'tie';
+            } else {
+                result = 'You lose';
+            }
+    
+            alert(`You picked Paper. Computer picked ${computerMove}. ${result}`);
+    
+    ">Paper</button>
+
+    <button onclick="
+
+        const randomNumber = Math.random();
+
+        // Scope of the variable computerMove is limited to the if else block
+        let computerMove = '';
+
+        // Devide the random number into three equal parts
+        // To get a random number between 0 and 0.33, we can check if the random number is greater than or equal to 0 and less than 0.33
+        if (randomNumber >= 0 && randomNumber < 0.33) {
+            computerMove = 'Rock';
+        } else if (randomNumber >= 0.33 && randomNumber < 0.66) {
+            computerMove = 'Paper';
+        } else {
+            computerMove = 'Scissors';
+        }
+    
+        console.log(computerMove);
+
+        let result = '';
+
+        if (computerMove === 'Rock') {
+            result = 'You lose';
+        } else if (computerMove === 'Paper') {
+            result = 'You win';
+        } else {
+            result = 'tie';
+        }
+
+        alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`);
+    
+    ">Scissors</button>
+
+    <script>
+        
+    </script>
+</body>
+</html>

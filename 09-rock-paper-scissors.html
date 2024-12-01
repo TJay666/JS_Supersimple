@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+        playGame('Rock');
+    ">Rock</button>
+
+    <button onclick="
+        playGame('Paper');    
+    ">Paper</button>
+
+    <button onclick="
+        playGame('Scissors');
+    ">Scissors</button>
+
+    <p class="js-moves"></p>
+    <p class="js-result"></p>
+    <p class="js-score"></p>
+
+    <button onclick="
+        score.wins = 0;
+        score.loses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScore();
+    ">Reset Score</button>
+
+    <script>
+        // Keep variable inside the function
+        // Function = let us reuse code
+        // Scope = where a variable is accessible
+        // Global scope = accessible everywhere
+        // Local scope = accessible only within the function
+        // Block scope = accessible only within the block
+        // Return = gives back a value from a function
+        // Parameters = variables that are passed into a function
+        // Improve the code by keeping the computerMove variable inside the function
+
+        // score = { wins: 0, loses: 0, ties: 0 }
+        let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, ties: 0 };
+
+
+        pdateScore();
+
+        /*
+        if (!score) {
+            score = { wins: 0, loses: 0, ties: 0 };
+        }
+        */
+
+        function playGame(playerMove) {
+            const computerMove = pickComputerMove();
+
+            let result = '';
+
+            if (playerMove === 'Rock') {
+                if (computerMove === 'Rock') {
+                    result = 'tie';
+                } else if (computerMove === 'Paper') {
+                    result = 'You lose';
+                } else {
+                    result = 'You win';
+                }
+
+            } else if (playerMove === 'Paper') {
+                if (computerMove === 'Rock') {
+                    result = 'You win';
+                } else if (computerMove === 'Paper') {
+                    result = 'tie';
+                } else {
+                    result = 'You lose';
+                }
+
+            } else {
+                if (computerMove === 'Rock') {
+                    result = 'You lose';
+                } else if (computerMove === 'Paper') {
+                    result = 'You win';
+                } else {
+                    result = 'tie';
+                }
+            }
+
+            if (result === 'You win') {
+                score.wins++;
+            } else if (result === 'You lose') {
+                score.loses++;
+            } else {
+                score.ties++;
+            }
+
+            // Store the score in the local storage
+            localStorage.setItem('score', JSON.stringify(score));
+
+            updateScore();
+
+            document.querySelector('.js-result').innerHTML = result;
+
+            document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}.`;
+
+            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+        Wins: ${score.wins}, Loses: ${score.loses}, Ties: ${score.ties}`);
+        }
+
+        function updateScore() {
+            document.querySelector('.js-score')
+                .innerHTML = `Wins: ${score.wins}, Loses: ${score.loses}, Ties: ${score.ties}`;
+        }
+        
+        function pickComputerMove() {
+            const randomNumber = Math.random();
+
+            // Scope of the variable computerMove is limited to the if else block
+            let computerMove = '';
+    
+            // Devide the random number into three equal parts
+            // To get a random number between 0 and 0.33, we can check if the random number is greater than or equal to 0 and less than 0.33
+            if (randomNumber >= 0 && randomNumber < 0.33) {
+                computerMove = 'Rock';
+            } else if (randomNumber >= 0.33 && randomNumber < 0.66) {
+                computerMove = 'Paper';
+            } else {
+                computerMove = 'Scissors';
+            }
+        
+            console.log(computerMove);
+            
+            // Return the computer move
+            return computerMove;
+        }
+
+
+    </script>
+</body>
+</html>
